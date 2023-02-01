@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!--Include xml comments in swagger UI-->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  
+    <!--To disable warnings like: warning CS1591: Missing XML comment for publicly visible type or member `WorkoutController`-->
+    <NoWarn>$(NoWarn);1591</NoWarn>
+
+    <!--Warn about the missing `[ProducesResponseType]` attributes for HTTP status codes-->
+    <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+  </PropertyGroup>
+
+</Project>
